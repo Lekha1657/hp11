@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus Tracker</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #f9f9f9 url('https://www.transparenttextures.com/patterns/skulls.png'); 
+      /* You can replace the above with any doodle-like free texture */
+      background-size: 200px;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: #ffffffcc;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2a7ae2;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .auth-buttons button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .login {
+      background: #e3f2fd;
+      color: #1976d2;
+    }
+
+    .signup {
+      background: #1976d2;
+      color: white;
+    }
+
+    .auth-buttons button:hover {
+      opacity: 0.85;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      width: 250px;
+      min-height: 150px;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .card h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #2a7ae2;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button.search-btn {
+      margin-top: 10px;
+      padding: 10px;
+      width: 100%;
+      background: #2a7ae2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button.search-btn:hover {
+      background: #1a5eb8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bus Tracker</h1>
+    <div class="auth-buttons">
+      <button class="login">Login</button>
+      <button class="signup">Signup</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Nearest Stop -->
+    <div class="card">
+      <h2>Nearest Stop</h2>
+      <p>Find the closest bus stop near you.</p>
+      <button class="search-btn">Locate</button>
+    </div>
+
+    <!-- Source & Destination -->
+    <div class="card">
+      <h2>Source & Destination</h2>
+      <input type="text" placeholder="Enter Source">
+      <input type="text" placeholder="Enter Destination">
+      <button class="search-btn">Search</button>
+    </div>
+  </main>
+</body>
+</html>
